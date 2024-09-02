@@ -1,0 +1,66 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  /* height: 40vmin; */
+  height: auto;
+  pointer-events: none;
+}
+
+:root {
+  --image1: url('../public/header-bg.jpeg');
+  --image2: url('../public/header-bg2.jpg');
+  --image3: url('../public/header-bg3.jpeg');
+  --image4: url('../public/header-bg4.jpg');
+}
+
+.App-header {
+  /* background-color: #282c34; */
+  background-image: var(--image1);
+  background-size: cover;
+  background-position: center;
+  animation: backgroundSlide 10s linear infinite;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(255, 255, 255);
+}
+
+@keyframes backgroundSlide {
+  0%, 20% {
+    background-image: var(--image1);
+  }
+  20%, 25% {
+    background-image: var(--image2), var(--image1);
+    background-blend-mode: normal, multiply;
+  }
+  25%, 45% {
+    background-image: var(--image2);
+  }
+  45%, 50% {
+    background-image: var(--image3), var(--image2);
+    background-blend-mode: normal, multiply;
+  }
+  50%, 70% {
+    background-image: var(--image3);
+  }
+  70%, 75% {
+    background-image: var(--image4), var(--image3);
+    background-blend-mode: normal, multiply;
+  }
+  75%, 95% {
+    background-image: var(--image4);
+  }
+  95%, 100% {
+    background-image: var(--image1), var(--image4);
+    background-blend-mode: normal, multiply;
+  }
+}
+
+.App-link {
+  color: #61dafb;
+}
