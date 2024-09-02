@@ -111,7 +111,6 @@ export const BookingForm = (props: BookingFormProps) => {
         min="1"
         max="10"
         id="guests"
-        defaultValue="1"
         value={formValues.numOfGuests}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
           setFormValues({ ...formValues, numOfGuests: e.target.value });

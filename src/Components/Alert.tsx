@@ -21,10 +21,12 @@ const Alert = () => {
       leastDestructiveRef={cancelRef}
       onClose={onClose}
     >
-      <AlertDialogOverlay>
+      <AlertDialogOverlay style={{justifyContent: "center"}}>
         <AlertDialogContent
           py={4}
+          px={6}
           backgroundColor={isSuccess ? "#81C784" : "#FF8A65"}
+          width="50%"
         >
           <AlertDialogHeader fontSize="lg" fontWeight="bold">
             {isSuccess ? "All good!" : "Oops!"}

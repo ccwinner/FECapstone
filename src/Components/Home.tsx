@@ -2,12 +2,15 @@
 import { BookingForm } from "./Booking";
 import { useAlertContext } from "../Context/alertContext";
 export const Home = () => {
-  const { onOpen } = useAlertContext();
+  const { onOpen, onClose } = useAlertContext();
   const markFinished = (state: boolean) => {
     onOpen(
       state ? "success" : "error",
       state ? "Booking successful!" : "Booking failed!"
     );
+    window.setTimeout(() => {
+      onClose();
+    }, 3000);
   };
   return (
     <div>
