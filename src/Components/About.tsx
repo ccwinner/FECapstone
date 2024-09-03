@@ -1,4 +1,4 @@
-
+import "./About.css";
 const mainStyle: React.CSSProperties = {
   display: "flex",
   justifyContent: "space-around",
@@ -12,6 +12,7 @@ const sectionStyle: React.CSSProperties = {
   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
   textAlign: "left"
 };
+
 
 export const About = () => {
   return (

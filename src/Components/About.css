@@ -1,0 +1,6 @@
+article p::first-letter {
+  font-size: 1.2em;
+  color: gold;
+  font-weight: bold;
+  font-style: italic;
+}
