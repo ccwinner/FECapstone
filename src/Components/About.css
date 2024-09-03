@@ -1,6 +1,56 @@
-article p::first-letter {
+.about-container {
+  background-color: #f0fff0;
+  padding: 20px;
+}
+
+.about-title {
+  color: red;
+  font-family: italic;
+  font-size: 30px;
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.about-section {
+  flex: 1 1 300px;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.about-image {
+  float: left;
+  width: 100px;
+  border-radius: 8px;
+  margin: 0 10px 10px 0;
+}
+
+.paragraph::first-letter {
   font-size: 1.2em;
-  color: gold;
+  color: red;
   font-weight: bold;
-  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-section {
+    max-width: 100%;
+  }
+
+  .about-image {
+    float: none;
+    display: block;
+    margin: 0 auto 10px;
+  }
 }
